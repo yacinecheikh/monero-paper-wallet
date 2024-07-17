@@ -14,6 +14,7 @@ text = text.replace("spend-url", spend_key)
 with open("tmp/content.xml", "w") as f:
     f.write(text)
 
-# return processed key strings for qrencode
-print(audit_key)
-print(spend_key)
+# dead code
+## return processed key strings for qrencode
+#print(audit_key)
+#print(spend_key)
