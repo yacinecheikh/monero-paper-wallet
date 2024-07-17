@@ -1,0 +1,34 @@
+#!/bin/sh
+audit_key="$1"
+spend_key="$2"
+
+rm -r tmp/*
+mkdir output
+
+unzip resources/template.odg -d tmp
+
+keys=$(./scripts/replace.py "$audit_key" "$spend_key")
+audit_key=$(echo "$keys" | head -n 1)
+spend_key=$(echo "$keys" | tail -n 1)
+
+echo "$audit_key"
+echo "$spend_key"
+
+
+qrencode -t png "$audit_key" -o output/audit.png
+qrencode -t png "$spend_key" -o output/spend.png
+
+
+audit_qrcode="10000001000000B7000000B7579F9B8899D5A201.png"
+spend_qrcode="10000001000000CF000000CF5C9DA7E5B84843BF.png"
+
+cp audit.png tmp/Pictures/$audit_qrcode
+cp spend.png tmp/Pictures/$spend_qrcode
+
+
+cd tmp
+zip -r ../output/billet.odg ./*
+
+cd ../output
+libreoffice --headless --convert-to pdf billet.odg
+
