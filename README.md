@@ -23,8 +23,8 @@ You must run this script from the main directory of this project, or the paths w
 
 When printing the resulting PDF, you should print both pages on the same piece of paper, fold it in half to make a square, and use staples on the open side to seal the inside.
 Here is an example of what I got with a printer that cannot print orange and translucid paper:
-![./example-front.jpeg]
-![./example-back.jpeg]
+![Example 1](./example-front.jpeg)
+![Example 2](./example-back.jpeg)
 
 ## Requirements
 
