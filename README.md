@@ -21,6 +21,11 @@ You can automate the process of generating and exporting wallet keys with the Mo
 Once you have the keys, run `./scripts/gen-pdf "<audit_key>" "<spend_key>"` and replace `<audit_key>` and `<spend_key>` by the keys you exported from your wallet.
 You must run this script from the main directory of this project, or the paths will break.
 
+When printing the resulting PDF, you should print both pages on the same piece of paper, fold it in half to make a square, and use staples on the open side to seal the inside.
+Here is an example of what I got with a printer that cannot print orange and translucid paper:
+![./example-front.jpeg]
+![./example-back.jpeg]
+
 ## Requirements
 
 - zip
