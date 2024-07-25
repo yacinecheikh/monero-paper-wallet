@@ -22,7 +22,7 @@ Once you have the keys, run `./scripts/gen-pdf "<audit_key>" "<spend_key>"` and 
 You must run this script from the main directory of this project, or the paths will break.
 
 When printing the resulting PDF, you should print both pages on the same piece of paper, fold it in half to make a square, and use staples on the open side to seal the inside.
-Here is an example of what I got with a printer that cannot print orange and translucid paper:
+Here is an example of what I got with a printer that cannot print orange:
 ![Example 1](./example-front.jpeg)
 ![Example 2](./example-back.jpeg)
 
